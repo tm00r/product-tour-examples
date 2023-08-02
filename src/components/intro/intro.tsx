@@ -49,7 +49,7 @@ const steps: Step[] = [
     element: '.animal-4',
     intro: ReactDOMServer.renderToStaticMarkup(
       <div>
-        Intro has @types/intro.js, so it's easy to use with TypeScript!
+        Intro has <code>@types/intro.js</code>, so it's easy to use with TypeScript!
         For localization we will have to use <code>intl</code> object since all labels are type of "string".
       </div>
     ),
@@ -62,7 +62,7 @@ const steps: Step[] = [
         But... in some cases behave weirdly... <br />
       </div>
     ),
-    position: 'left',
+    position: 'top',
   },
 ];
 

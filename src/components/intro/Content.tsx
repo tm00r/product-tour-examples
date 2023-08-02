@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { introJSONExample, introInlineExample } from './intro';
 
 const gallery = Object.values(
-  import.meta.glob('../assets/images/intro/*.{png,jpg,jpeg,PNG,JPEG}', {
+  import.meta.glob('../../assets/images/intro/*.{png,jpg,jpeg,PNG,JPEG}', {
     eager: true,
     as: 'url',
   })
@@ -31,7 +31,7 @@ export const IntroContent: FC<{ id: string }> = () => {
           </Space>
         }
       >
-        <Row wrap gutter={[10, 10]}>
+        <Row wrap gutter={[10, 10]} justify="center">
           {gallery.map((image: string) => {
             const imageName = image
               .replace('.jpg', '')

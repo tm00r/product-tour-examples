@@ -52,6 +52,18 @@
     lodash.camelcase "^4.3.0"
     rc-util "^5.31.1"
 
+"@ant-design/icons@^5.2.4":
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/@ant-design/icons/-/icons-5.2.4.tgz#ffae1509e38d1a6518b67241ebf3274d625191d8"
+  integrity sha512-WFPLMLiLaTcw7Vzwuglgm7aViI9DJ8SdrLt6r1rI1oxA1yjp02/ZRB4b+OFlFy2F91JMq3FnAQ9K6irq9QiSvw==
+  dependencies:
+    "@ant-design/colors" "^7.0.0"
+    "@ant-design/icons-svg" "^4.3.0"
+    "@babel/runtime" "^7.11.2"
+    classnames "^2.2.6"
+    lodash.camelcase "^4.3.0"
+    rc-util "^5.31.1"
+
 "@ant-design/pro-card@2.5.9":
   version "2.5.9"
   resolved "https://registry.yarnpkg.com/@ant-design/pro-card/-/pro-card-2.5.9.tgz#717f587e13949e93855fb7ddd2e54f76f48d63b4"

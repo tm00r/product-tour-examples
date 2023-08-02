@@ -1,7 +1,8 @@
+import { FC, useState } from 'react';
 import { ProCard } from '@ant-design/pro-components';
 import { Button, Col, Row, Image, Space } from 'antd';
-import { FC } from 'react';
-import { shepherdExample } from './shephers';
+import Joyride from 'react-joyride';
+import { joyrideConfig } from './joyride';
 
 const gallery = Object.values(
   import.meta.glob('../../assets/images/shepherd/*.{png,jpg,jpeg,PNG,JPEG}', {
@@ -10,9 +11,17 @@ const gallery = Object.values(
   })
 );
 
-export const ShepherdContent: FC<{ id: string }> = () => {
+export const JoyrideContent: FC<{ id: string }> = () => {
+  const [isRunning, setIsRunning] = useState(false);
   return (
     <>
+      <Joyride
+        {...joyrideConfig}
+        run={isRunning}
+        callback={(data) => {
+          if (data.action === 'reset' || data.action === 'close') setIsRunning(false);
+        }}
+      />
       <ProCard
         direction="column"
         gutter={[0, 16]}
@@ -22,8 +31,8 @@ export const ShepherdContent: FC<{ id: string }> = () => {
         }}
         extra={
           <Space>
-            <Button key="1" onClick={() => shepherdExample.start()}>
-              Shepherd.js
+            <Button key="1" onClick={() => setIsRunning(true)}>
+              React Joyride
             </Button>
           </Space>
         }

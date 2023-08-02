@@ -1,10 +1,15 @@
 export const mainTabs = [
+
     {
-      tab: 'Shepherd',
-      key: 'shepherd',
+      tab: 'Joyride',
+      key: 'joyride',
     },
     {
       tab: 'Intro',
       key: 'intro',
+    },
+    {
+      tab: 'Shepherd',
+      key: 'shepherd',
     },
   ]
