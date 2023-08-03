@@ -5,7 +5,7 @@ import Joyride from 'react-joyride';
 import { joyrideConfig } from './joyride';
 
 const gallery = Object.values(
-  import.meta.glob('../../assets/images/shepherd/*.{png,jpg,jpeg,PNG,JPEG}', {
+  import.meta.glob('../../assets/images/joyride/*.{png,jpg,jpeg,PNG,JPEG}', {
     eager: true,
     as: 'url',
   })
@@ -41,7 +41,7 @@ export const JoyrideContent: FC<{ id: string }> = () => {
           {gallery.map((image: string) => {
             const imageName = image
               .replace('.jpg', '')
-              .replace('/src/assets/images/shepherd/', '');
+              .replace('/src/assets/images/joyride/', '');
             return (
               <Col key={imageName}>
                 <Image
